@@ -40,7 +40,7 @@ const placeOrder = async (req, res) => {
     res.json({
       success: true,
       orderId: order.id,
-      frontend_url: `${frontend_url}/verify?orderId=${newOrder._id}`, // URL to redirect after payment
+      frontend_url: `${frontend_url}/verify/${newOrder._id}`, // URL to redirect after payment
     });
   } catch (error) {
     console.log(error);
